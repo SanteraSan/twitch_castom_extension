@@ -1,0 +1,14 @@
+html,
+body {
+  margin: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.frame {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid #ffe08a;
+  background: transparent;
+  pointer-events: none;
+}

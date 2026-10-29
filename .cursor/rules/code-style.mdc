@@ -1,0 +1,25 @@
+---
+description: Стиль TypeScript в оверлее
+globs: "**/*.{ts,css,html}"
+alwaysApply: false
+---
+
+# Стиль
+
+- Именованные экспорты. Имена файлов в kebab-case.
+- Логика команды живёт в модуле без DOM. Страница только вызывает этот модуль.
+- Одна функция — одно действие. Без комментариев, которые повторяют имя функции.
+- Тест лежит рядом с модулем и называется `имя.test.ts`.
+- В тесте видно вход и ожидаемый результат. Без снимков всей страницы и без проверки цвета пикселя.
+
+```ts
+// плохо
+export default function doStuff(x: any) {
+  document.body.className = x;
+}
+
+// хорошо
+export function applyCommand(command: OverlayCommand): OverlayState {
+  return nextState(state, command);
+}
+```
